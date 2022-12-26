@@ -13,6 +13,11 @@ export const CartProvider = ({ children }) => {
     return cart.some((product) => product.id === id);
   };
 
+  const removerItem = (id) => {
+    const updateCart = cart.filter((product) => product.id !== id);
+    setCart(updateCart);
+  };
+
   const getCantidad = () => {
     let acc = 0;
 
@@ -22,7 +27,9 @@ export const CartProvider = ({ children }) => {
     return acc;
   };
   return (
-    <CartContext.Provider value={{ cart, addItem, estaEnCarrito, getCantidad }}>
+    <CartContext.Provider
+      value={{ cart, addItem, removerItem, estaEnCarrito, getCantidad }}
+    >
       {children}
     </CartContext.Provider>
   );
