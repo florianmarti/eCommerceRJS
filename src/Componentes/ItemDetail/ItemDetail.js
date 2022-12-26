@@ -3,17 +3,17 @@ import { useContext } from "react";
 import { CartContext } from "../Context/CartContext";
 
 const ItemDetail = ({ producto }) => {
-  const { id, nombre, image, descripcion, precio, stock } = producto;
+  const { id, nombre, img, descripcion, precio, stock } = producto;
   const { addItem, estaEnCarrito } = useContext(CartContext);
 
   const handleOnAdd = (cantidad) => {
-    addItem({ id, nombre, precio, cantidad, image });
+    addItem({ id, nombre, precio, cantidad, img });
   };
 
   return (
     <div>
       <h1>{nombre}</h1>
-      <img src={image} alt={nombre} />
+      <img src={img} alt={nombre} />
       <p>{descripcion}</p>
       <h2>$ {precio}</h2>
 

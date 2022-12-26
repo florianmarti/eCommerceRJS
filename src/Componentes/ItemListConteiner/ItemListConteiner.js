@@ -30,7 +30,9 @@ const ItemListConteiner = ({ wellcome }) => {
         setLoading(false);
       });
   }, [catId]);
-  console.log(Productos);
+  if (loading) {
+    return <h1>Cargando...</h1>;
+  }
   return (
     <div>
       <h1>{wellcome}</h1>
