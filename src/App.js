@@ -1,8 +1,6 @@
 import "./App.css";
 import Navbar from "./Componentes/Navbar/Navbar";
 import ItemListConteiner from "./Componentes/ItemListConteiner/ItemListConteiner";
-import "boxicons";
-import "react-router-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailConteiner from "./Componentes/ItemDetailConteiner/ItemDetailConteiner";
 import Button from "./Componentes/Buttons/Button";
