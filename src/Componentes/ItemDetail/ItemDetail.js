@@ -1,4 +1,4 @@
-import ButtonCounter from "../ItemCount/ButtonCounter";
+import Count from "../ItemCount/Count";
 import { useContext } from "react";
 import { CartContext } from "../Context/CartContext";
 
@@ -20,7 +20,7 @@ const ItemDetail = ({ producto }) => {
       {estaEnCarrito(id) ? (
         <button>Terminar Compra</button>
       ) : stock > 0 ? (
-        <ButtonCounter stock={stock} onAdd={handleOnAdd} />
+        <Count stock={stock} onAdd={handleOnAdd} />
       ) : (
         <h1>No hay Stock</h1>
       )}

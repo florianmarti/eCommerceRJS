@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const ButtonCounter = ({ stock, onAdd }) => {
+const Count = ({ stock, onAdd }) => {
   const [count, setCount] = useState(0);
 
   const quitar = () => {
@@ -24,4 +24,4 @@ const ButtonCounter = ({ stock, onAdd }) => {
     </div>
   );
 };
-export default ButtonCounter;
+export default Count;
